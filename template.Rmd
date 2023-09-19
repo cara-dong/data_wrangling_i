@@ -2,3 +2,47 @@
 title: "Data Import Lecture"
 output: github_document
 ---
+
+```{r message=FALSE}
+litters_df = read_csv(file = "./data/FAS_litters.csv")
+```
+
+```{r}
+# The package::function syntax lets you use a function from a package without loading the whole library.
+
+litters_df = janitor::clean_names(litters_df)
+names(litters_df)
+```
+
+```{r}
+skimr::skim(litters_df)
+```
+```{r}
+pups_data = read_csv(file = "./data/FAS_pups.csv")
+```
+```{r}
+pups_data = read_csv(file = "/Users/caradong/Desktop/P8105 Data Science/data_wrangling_i/data/FAS_pups.csv")
+```
+
+```{r}
+tail(litters_data)
+```
+
+```{r}
+str(litters_df)
+```
+```{r}
+library(readxl)
+mlb11_data = read_excel("data/mlb11.xlsx", n_max = 20)
+head(mlb11_data, 5)
+```
+
+```{r}
+library(haven)
+pulse_data = read_sas("./data/public_pulse_data.sas7bdat")
+head(pulse_data, 5)
+```
+```{r}
+# write_*
+```
+
