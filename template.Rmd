@@ -43,6 +43,6 @@ pulse_data = read_sas("./data/public_pulse_data.sas7bdat")
 head(pulse_data, 5)
 ```
 ```{r}
-# write_*
+write_csv(litters_df, "data/litters_cleaned.csv")
 ```
 
